@@ -28,5 +28,11 @@ MyGame/obj/Debug/MainWindow.g.cs
 MyGame/obj/Debug/Author.g.i.cs
 *.cache
 .vs/*
-.vs/MyGame/
-
+.vs/MyGame/*
+.vs/
+*.resources
+*.resources
+*.exe
+*.txt
+*.cache
+WPF-Game\.vs

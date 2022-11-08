@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fon.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("vkw.svg")]
 
 
