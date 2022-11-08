@@ -27,7 +27,7 @@
                    Text="Допускается 4 ошибки"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"></TextBlock>
-        <Button Grid.Row="2" Content="Прочитано" Width="70" Height="20" Click="RulesButton"></Button>
+        <Button Grid.Row="2" Content="Прочитано" Width="70" Height="20" Click="RulesButton" x:Name="ruleButton"></Button>
         <Image Source="rules.png" Grid.Column="1" Grid.RowSpan="5"></Image>
     </Grid>
 </Window>

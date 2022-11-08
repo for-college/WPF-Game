@@ -23,15 +23,23 @@ namespace MyGame
         {
             InitializeComponent();
         }
-
+        int counter;
         private void RulesButton(object sender, RoutedEventArgs e)
         {
-            string[] rules = {"Допускается 6 ошибок", "Используются слова только на русском языке", "Сквернословие не использутся", "предполедний","последний элемент"};
+            
+            string[] rules = {"Используются слова только на русском языке", 
+                "Сквернословия не использутся", 
+                "Первую букву слова слова следует вводить в верхнем регистре","Удачной игры!"};
             for(int i = 0; i < rules.Length; i++)
             {
-                rulesBlock.Text = rules[i];
+                rulesBlock.Text = rules[counter];
+                if(counter + 1 == rules.Length)
+                {
+                    ruleButton.IsEnabled = false;
+                }
                 
             }
+            counter++;
         }
     }
 }
