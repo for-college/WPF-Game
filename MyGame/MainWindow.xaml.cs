@@ -36,6 +36,10 @@ namespace MyGame
             Close();
         }
 
-        
+        private void OpenAuthorWindow(object sender, RoutedEventArgs e)
+        {
+            Author author = new Author();
+            author.ShowDialog();
+        }
     }
 }

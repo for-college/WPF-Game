@@ -26,10 +26,11 @@
         <TextBlock x:Name="rulesBlock" Grid.Row="1" 
                    Text="Чтобы увидеть правила, нажмите на кнопочку"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left" Height="36" Width="280" TextWrapping="Wrap" FontWeight="Medium">
+                   HorizontalAlignment="Center" Height="40" Width="280" TextWrapping="Wrap" FontWeight="Medium" Margin="4,0,0,0">
         </TextBlock>
-        <Button Grid.Row="2" Content="Вперед" Width="70" Height="20" Click="NextRule" x:Name="ruleButtonNext" HorizontalAlignment="Right"></Button>
-        <Button Grid.Row="2" Content="Назад" Width="70" Height="20" Click="PrevRule" x:Name="ruleButtonBefore" HorizontalAlignment="Left"></Button>
+        <Button Grid.Row="2" Content="Вперед" Width="70" Height="20" Click="NextRule" x:Name="ruleButtonNext" HorizontalAlignment="Right" Background="#00DDDDDD"></Button>
+        <Button Grid.Row="2" Content="Назад" Width="70" Height="20" Click="PrevRule" x:Name="ruleButtonBefore" HorizontalAlignment="Left" Background="#00DDDDDD"></Button>
         <Image Source="rules.png" Grid.Column="1" Grid.RowSpan="5"></Image>
+        <Button Grid.Column="1" Content="Закрыть" Width="70" Height="20" Click="closeButton_Click" x:Name="closeButton" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Red" Foreground="Red"></Button>
     </Grid>
 </Window>

@@ -28,7 +28,7 @@ namespace MyGame
         int counter;
         string[] rules = {"Используются слова только на русском языке",
                 "Сквернословия не использутся",
-                "Первую букву слова слова следует вводить в верхнем регистре","Удачной игры!"};
+                "Первую букву слова следует вводить в верхнем регистре", "Если игрок ошибается, то ход переходит к другому", "Удачной игры!"};
         private void NextRule(object sender, RoutedEventArgs e)
         {
             if (counter == 1)
@@ -43,7 +43,7 @@ namespace MyGame
             {
                 ruleButtonNext.IsEnabled = true;
             }
-            rulesBlock.Text = $" [{counter + 1}/ 4] " + rules[counter];
+            rulesBlock.Text = $" [{counter + 1}/ 5] " + rules[counter];
             counter++;
         }
         private void PrevRule(object sender, RoutedEventArgs e)
@@ -59,7 +59,12 @@ namespace MyGame
                 ruleButtonBefore.IsEnabled = true;
                 ruleButtonNext.IsEnabled = true;
             }
-            rulesBlock.Text = $" [{counter}/ 4] " + rules[counter - 1];
+            rulesBlock.Text = $" [{counter}/ 5] " + rules[counter - 1];
+        }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

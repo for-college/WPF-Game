@@ -24,30 +24,32 @@
             <RowDefinition Height="80"></RowDefinition>
             <RowDefinition Height="90"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" VerticalAlignment="Center" 
+        <Border Grid.Column="1" Background="White" CornerRadius="10" Height="36" VerticalAlignment="Top" Margin="116,4,116,0">
+            <TextBlock VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
-                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="#FF00FFE2">
+                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="#FF00FFE2" Height="37" Width="280">
             Весёлая игра Виселица
-        </TextBlock>
+            </TextBlock>
+        </Border>
         <TextBlock 
             Grid.Row="5" Grid.Column="2" 
             Width="70"
-            HorizontalAlignment="Center" Background="#FF00FFE2" 
-            Foreground="Black" VerticalAlignment="Bottom" Text="       V1.4"/>
-        <Button Grid.Column="2" Height="20" Width="45" Content="Выход" Background="White" BorderBrush="Red" Foreground="Red" Click="Button_Click_1"></Button>
-        <Button Grid.Row="5" Height="30" Content="Автор" Background="White" BorderBrush="Red" Foreground="Red"></Button>
+            HorizontalAlignment="Left" Background="#FF00FFE2" 
+            Foreground="Black" VerticalAlignment="Bottom" Text="       V1.4" Margin="10,0,0,0"/>
+        <Button Grid.Column="2" Height="30" Width="45" Content="Выход" Background="White" BorderBrush="Red" Foreground="Red" Click="Button_Click_1" Margin="35,0,0,10"></Button>
+        <Button Grid.Row="5" Height="30" Content="Автор" Background="White" BorderBrush="Red" Foreground="Red" Margin="0,60,0,0" Click="OpenAuthorWindow"></Button>
 
         <Button Grid.Column="1" 
                 Grid.Row="4" 
                 Content="Правила"
                 Width="90" Height="40" 
                 VerticalAlignment="Bottom" 
-                Click="ShowRules" Background="#00DDDDDD" BorderBrush="#FF00FFE2" Foreground="#FF00FFE2"/>
+                Click="ShowRules" Background="#FDFFFFFF" BorderBrush="#FF00FFE2" Foreground="#FF00FFE2" FontWeight="Bold" FontSize="16"/>
 
         <Button Grid.Column="1" 
                 Grid.Row="3" 
                 Content="Играть" 
-                Width="90" Height="40" BorderBrush="#FF00FFE2" Background="Transparent" Foreground="#FF00FFE2"/>
+                Width="90" Height="40" BorderBrush="#FF00FFE2" Background="#F8FFFFFF" Foreground="#FF00FFE2" FontWeight="Bold" FontSize="16"/>
 
         <Label Grid.Row="2" 
                Grid.Column="1" 
@@ -55,9 +57,10 @@
                HorizontalAlignment="Left"
                Height="40"
                VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF00FFE2"/>
-        <TextBox Grid.Row="2" 
+        <TextBox x:Name="player1"
+                 Grid.Row="2" 
                  Grid.Column="1" 
-                 Width="100" Height="40" 
+                 Width="100" Height="20" 
                  HorizontalAlignment="Left" 
                  VerticalAlignment="Bottom"/>
 
@@ -67,9 +70,10 @@
                Height="40"
                HorizontalAlignment="Right"
                VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF00FFE2"/>
-        <TextBox Grid.Row="2" 
+        <TextBox x:Name="player2"
+                 Grid.Row="2" 
                  Grid.Column="1" 
-                 Width="100" Height="40"
+                 Width="100" Height="20"
                  VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
     </Grid>
 </Window>
