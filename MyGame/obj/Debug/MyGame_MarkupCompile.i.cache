@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-H:\ОАиП\MyGame\MyGame\obj\Debug\
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\
 MyGame
 none
 false
 DEBUG;TRACE
-H:\ОАиП\MyGame\MyGame\App.xaml
-22144869368
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\App.xaml
+3-1996521585
 
-71327169044
+8-963129059
 13-1310406943
-MainWindow.xaml;Rules.xaml;
+Author.xaml;MainWindow.xaml;Rules.xaml;
 
-False
+True
 

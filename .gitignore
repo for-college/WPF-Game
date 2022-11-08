@@ -18,3 +18,15 @@ MyGame/obj/Debug/Rules.baml
 .vs/MyGame/v17/.suo
 *.json
 *.sqlite
+*.vsidx
+*.sqlite
+*.vsidx
+.vs/WPF-Game/v17/.suo
+MyGame/obj/Debug/MainWindow.g.cs
+.vs/WPF-Game/v17/.suo
+*.vsidx
+MyGame/obj/Debug/Author.g.i.cs
+*.cache
+.vs/*
+.vs/MyGame/
+
