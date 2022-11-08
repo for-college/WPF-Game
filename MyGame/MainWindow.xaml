@@ -10,7 +10,7 @@
     <Window.Background>
         <ImageBrush ImageSource="/fon.jpg" Opacity="90.5"/>
     </Window.Background>
-    <Grid Background="#3F000000">
+    <Grid Background="#66000000">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
