@@ -36,3 +36,6 @@ MyGame/obj/Debug/Author.g.i.cs
 *.txt
 *.cache
 WPF-Game\.vs
+*.sqlite
+.vs/slnx.sqlite
+.vs/MyGame/v17/.suo
