@@ -16,3 +16,5 @@ MyGame/obj/Debug/MyGame_MarkupCompile.lref
 MyGame/obj/Debug/Rules.baml
 .vs/slnx.sqlite
 .vs/MyGame/v17/.suo
+*.json
+*.sqlite
