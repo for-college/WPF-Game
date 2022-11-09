@@ -27,4 +27,5 @@
                    Text="Рыба карась игра началась!"
                    FontStyle="Italic" FontWeight="Bold" FontSize="18" Foreground="#FF00E6CC" />
     </Grid>
+    
 </Window>
