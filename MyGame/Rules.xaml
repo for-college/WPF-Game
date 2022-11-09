@@ -8,9 +8,8 @@
         Title="Правила игры" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="450"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
-
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"></RowDefinition>
@@ -28,7 +27,8 @@
                    Grid.Row="2" 
                    Text="Чтобы увидеть правила, нажмите на кнопочку"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Center" Height="20" Width="280" TextWrapping="Wrap" FontWeight="Medium" Margin="4,0,0,0">
+                   TextAlignment="Center"
+                   HorizontalAlignment="Center" Height="40" Width="280" TextWrapping="Wrap" FontWeight="Medium" Margin="4,0,0,0">
         </TextBlock>
         <Button Grid.Row="3" Grid.ColumnSpan="2" Margin="400 0 0 0" Content="Вперед" Width="70" Height="20" Click="NextRule" x:Name="ruleButtonNext" HorizontalAlignment="Center" Background="#00DDDDDD"></Button>
         <Button Grid.Row="3" Grid.ColumnSpan="2" Margin="0 0 400 0" Content="Назад" Width="70" Height="20" Click="PrevRule" x:Name="ruleButtonBefore" HorizontalAlignment="Center" Background="#00DDDDDD"></Button>

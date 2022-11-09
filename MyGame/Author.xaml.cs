@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,5 +29,14 @@ namespace MyGame
             Close();
         }
 
+        private void openGitHub(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/scffs");
+        }
+
+        private void openVK(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://vk.com/scoffs");
+        }
     }
 }
