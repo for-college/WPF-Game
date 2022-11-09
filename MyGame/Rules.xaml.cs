@@ -62,7 +62,7 @@ namespace MyGame
             rulesBlock.Text = $" [{counter}/ 5] " + rules[counter - 1];
         }
 
-        private void closeButton_Click(object sender, RoutedEventArgs e)
+        public void CloseWindow(object sender, RoutedEventArgs e)
         {
             Close();
         }

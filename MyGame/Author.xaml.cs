@@ -23,10 +23,10 @@ namespace MyGame
         {
             InitializeComponent();
         }
-
-        private void Image_Click(object sender, RoutedEventArgs e)
+        public void CloseWindow(object sender, RoutedEventArgs e)
         {
-            
+            Close();
         }
+
     }
 }

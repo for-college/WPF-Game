@@ -17,6 +17,9 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Автор программы" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold"/>
         <Image Grid.Row="2" Source="GH.png"></Image>
-        <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"><Hyperlink NavigateUri="https://github/scffs">Ссылка на мой GitHub</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button VerticalAlignment="Top"
+                Width="70" Height="20" Content="Закрыть" Background="White" BorderBrush="Red" Foreground="Red" Click="CloseWindow" 
+                HorizontalAlignment="Right" Margin="0,5,0,0"></Button>
     </Grid>
 </Window>

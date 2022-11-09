@@ -39,3 +39,5 @@ WPF-Game\.vs
 *.sqlite
 .vs/slnx.sqlite
 .vs/MyGame/v17/.suo
+.vs/slnx.sqlite
+.vs/WPF-Game/v17/.suo

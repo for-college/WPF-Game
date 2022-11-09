@@ -6,15 +6,16 @@
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
         Title="Виселица" Height="450" Width="800">
-
     <Window.Background>
         <ImageBrush ImageSource="/fon.jpg" Opacity="90.5"/>
     </Window.Background>
     <Grid Background="#66000000">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
@@ -24,56 +25,79 @@
             <RowDefinition Height="80"></RowDefinition>
             <RowDefinition Height="90"></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Grid.Column="1" Background="White" CornerRadius="10" Height="36" VerticalAlignment="Top" Margin="116,4,116,0">
-            <TextBlock VerticalAlignment="Center" 
+        <Border Grid.Column="2" Background="White" CornerRadius="10" Height="30" VerticalAlignment="Bottom" Width="290">
+            <TextBlock TextAlignment="Center"
+                   VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
-                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="#FF00FFE2" Height="37" Width="280">
+                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="#FF00FFE2" Height="38" Width="290">
             Весёлая игра Виселица
             </TextBlock>
         </Border>
         <TextBlock 
-            Grid.Row="5" Grid.Column="2" 
-            Width="70"
-            HorizontalAlignment="Left" Background="#FF00FFE2" 
-            Foreground="Black" VerticalAlignment="Bottom" Text="       V1.4" Margin="10,0,0,0"/>
-        <Button Grid.Column="2" Height="30" Width="45" Content="Выход" Background="White" BorderBrush="Red" Foreground="Red" Click="Button_Click_1" Margin="35,0,0,10"></Button>
-        <Button Grid.Row="5" Height="30" Content="Автор" Background="White" BorderBrush="Red" Foreground="Red" Margin="0,60,0,0" Click="OpenAuthorWindow"></Button>
-
-        <Button Grid.Column="1" 
-                Grid.Row="4" 
-                Content="Правила"
+            Grid.Row="5" Grid.Column="4" 
+            Width="70" Background="#FF00FFE2" 
+            TextAlignment="Center"
+            Foreground="Black" Text="V1.4" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+        <Button Grid.Column="4" 
+                VerticalAlignment="Top"
+                Height="30" Width="45" Content="Выход" Background="White" BorderBrush="Red" Foreground="Red" Click="CloseWindow" 
+                HorizontalAlignment="Right" />
+        <Button Grid.Row="3"  Grid.Column="1" 
                 Width="90" Height="40" 
-                VerticalAlignment="Bottom" 
-                Click="ShowRules" Background="#FDFFFFFF" BorderBrush="#FF00FFE2" Foreground="#FF00FFE2" FontWeight="Bold" FontSize="16"/>
+                Panel.ZIndex="1" HorizontalAlignment="Left" 
+                Content="Автор"  BorderBrush="#FF00FFE2" Background="#F8FFFFFF" Foreground="#FF00FFE2" 
+                FontWeight="Bold" FontSize="16" 
+                Click="OpenAuthorWindow" />
 
-        <Button Grid.Column="1" 
+
+        <Button Grid.Column="3" 
+                Grid.Row="3" 
+                Content="Правила"
+                HorizontalAlignment="Right" 
+                Width="90" Height="40" 
+                VerticalAlignment="Center" 
+                Click="ShowRules" Background="#FDFFFFFF" BorderBrush="#FF00FFE2" Foreground="#FF00FFE2" 
+                FontWeight="Bold" FontSize="16" Panel.ZIndex="1"/>
+
+        <Button Grid.Column="2" 
                 Grid.Row="3" 
                 Content="Играть" 
-                Width="90" Height="40" BorderBrush="#FF00FFE2" Background="#F8FFFFFF" Foreground="#FF00FFE2" FontWeight="Bold" FontSize="16"/>
+                Width="90" Height="40" BorderBrush="#FF00FFE2" Background="#F8FFFFFF" Foreground="#FF00FFE2" FontWeight="Bold" FontSize="16" Panel.ZIndex="1"/>
 
         <Label Grid.Row="2" 
                Grid.Column="1" 
                Content="Игрок 1"
-               HorizontalAlignment="Left"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
                Height="40"
-               VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF00FFE2"/>
-        <TextBox x:Name="player1"
+               FontSize="18" FontWeight="Bold" Foreground="#FF00FFE2" Panel.ZIndex="1" Grid.RowSpan="2"/>
+        <TextBox 
+            x:Name="player1"
                  Grid.Row="2" 
                  Grid.Column="1" 
                  Width="100" Height="20" 
                  HorizontalAlignment="Left" 
-                 VerticalAlignment="Bottom"/>
+                 VerticalAlignment="Bottom" Panel.ZIndex="1"/>
 
         <Label Grid.Row="2" 
-               Grid.Column="1" 
+               Grid.Column="3" 
+               Grid.RowSpan="2"
                Content="Игрок 2"
                Height="40"
-               HorizontalAlignment="Right"
-               VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF00FFE2"/>
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF00FFE2" Panel.ZIndex="1"/>
         <TextBox x:Name="player2"
                  Grid.Row="2" 
-                 Grid.Column="1" 
+                 Grid.Column="3" 
                  Width="100" Height="20"
-                 VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                 VerticalAlignment="Bottom" HorizontalAlignment="Center" Panel.ZIndex="1"/>
+        <Border Grid.Row="2" Grid.RowSpan="3" CornerRadius="25" Grid.Column="1" Grid.ColumnSpan="3" >
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F43B2C1" Offset="0.01"/>
+                    <GradientStop Color="#7F00535D" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
     </Grid>
 </Window>
