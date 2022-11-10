@@ -19,7 +19,7 @@
 - `Слева` - число слева > справа.
 # Installation
 ```
-git clone https://github.com/WinsomeQuill/easy-site.git
+git clone https://github.com/scffs/WPF-Game.git
 ```
 ## Используемые технологии
 - `C#`
