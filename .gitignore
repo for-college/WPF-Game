@@ -32,8 +32,6 @@ MyGame/obj/Debug/Author.g.i.cs
 .vs/
 *.resources
 *.resources
-*.exe
-*.txt
 *.cache
 WPF-Game\.vs
 *.sqlite
