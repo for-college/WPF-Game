@@ -51,28 +51,28 @@ namespace MyGame
         private void TheEnd()
         {
             temp++;
-            MessageBox.Show($"Очков набрано: {score}", "Конец раунда");
-            if (temp > 0 && temp < 1) player1_result = score;
+            MessageBox.Show($"Очков набрано: {score + 1}", "Конец раунда");
             if (temp > 1)
             {
                 player2_result = score;
                 if (player1_result > player2_result)
                 {
-                    MessageBox.Show($"Выиграл {name1}", "Конец игры");
+                    MessageBox.Show($"Выиграл {name1}!", "Конец игры");
                     Close();
                 }
-                if(player1_result == player2_result)
+                else if(player1_result == player2_result)
                 {
-                    MessageBox.Show($"Ничья 1={player1_result} 2={player2_result}", "Конец игры");
+                    MessageBox.Show($"Ничья!", "Конец игры");
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show($"Выиграл {name2}", "Конец игры");
+                    MessageBox.Show($"Выиграл {name2}!", "Конец игры");
                     Close();
                 }
                
             }
+            else { player1_result = score; }
             round = 0;
             score = 0;
             Random();
