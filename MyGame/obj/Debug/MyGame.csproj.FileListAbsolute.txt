@@ -36,3 +36,5 @@ C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\MyGame.exe
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\MyGame.pdb
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Author.g.cs
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Author.baml
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Game.g.cs
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Game.baml

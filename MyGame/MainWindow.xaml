@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
         Title="Виселица" Height="450" Width="700">
-    <Grid Background="White">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0086B3"/>
+                <GradientStop Color="#FF4219A0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="90"></ColumnDefinition>
@@ -33,10 +39,7 @@
             <TextBlock TextAlignment="Center"
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
-                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="#FF00FFE2" Height="38" Width="300
-                       ">
-            Весёлая игра Виселица
-            </TextBlock>
+                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="#FF00FFE2" Height="38" Width="300                        "><Run Language="ru-ru" Text="Где больше?"/></TextBlock>
         </Border>
         <Button Grid.Column="4" 
                 VerticalAlignment="Top"
@@ -76,7 +79,7 @@
         <Button Grid.Column="2" 
                 Grid.Row="3" 
                 Content="Играть" 
-                Width="90" Height="40" BorderBrush="#FF00FFE2" Foreground="#FF00FFE2" FontWeight="Bold" FontSize="16" Panel.ZIndex="1">
+                Width="90" Height="40" BorderBrush="#FF00FFE2" Foreground="#FF00FFE2" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Click="OpenGame">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFC300FF"/>
@@ -133,10 +136,10 @@
                  VerticalAlignment="Bottom" HorizontalAlignment="Left" Panel.ZIndex="1"/>
         <Border Grid.Row="2" Grid.RowSpan="3" CornerRadius="25" Grid.Column="1" Grid.ColumnSpan="3">
             <Border.Background>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF0086B3"/>
-                    <GradientStop Color="#FF4219A0" Offset="1"/>
-                </RadialGradientBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEDEDED"/>
+                    <GradientStop Color="White" Offset="0.99"/>
+                </LinearGradientBrush>
             </Border.Background>
         </Border>
     </Grid>

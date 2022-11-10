@@ -60,6 +60,7 @@
     <Compile Include="Author.xaml.cs">
       <DependentUpon>Author.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data.cs" />
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
