@@ -31,11 +31,27 @@ namespace MyGame
             rules.ShowDialog();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void CloseWindow(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
-        
+        private void OpenAuthorWindow(object sender, RoutedEventArgs e)
+        {
+            Author author = new Author();
+            author.ShowDialog();
+        }
+
+        private void OpenGame(object sender, RoutedEventArgs e)
+        {
+            if (player1.Text == "" || player2.Text == "") MessageBox.Show("Заполните все поля!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            else
+            {
+                Data.playerOne = player1.Text;
+                Data.playerTwo = player2.Text;
+                Game game = new Game();
+                game.ShowDialog();
+            }
+        }
     }
 }
