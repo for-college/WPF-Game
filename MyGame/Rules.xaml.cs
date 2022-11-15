@@ -26,9 +26,11 @@ namespace MyGame
             ruleButtonBefore.IsEnabled = false;
         }
         int counter;
-        string[] rules = {"Используются слова только на русском языке.",
-                "Сквернословия не использутся.",
-                "Первую букву слова следует вводить в верхнем регистре.", "Если игрок ошибается, то ход переходит к другому.", "Удачной игры!"};
+        string[] rules = {"Сначала играет игрок №1, затем очередь игрока №2.",
+                "Имена рекомендуется заполнять.",
+                "В качестве количества раундов вводить строго целое положительное число.", "Если количество раундов не задано, то по умолчанию оно будет равно 5",
+                "После окончания игры вы можете начать снова, предыдущий результать не учитывается.",
+                "Удачной игры!"};
         private void NextRule(object sender, RoutedEventArgs e)
         {
             if (counter == 1)
@@ -43,7 +45,7 @@ namespace MyGame
             {
                 ruleButtonNext.IsEnabled = true;
             }
-            rulesBlock.Text = $" [{counter + 1}/ 5] " + rules[counter];
+            rulesBlock.Text = $" [{counter + 1}/"+ rules.Length + "] " + rules[counter];
             counter++;
         }
         private void PrevRule(object sender, RoutedEventArgs e)
@@ -59,7 +61,7 @@ namespace MyGame
                 ruleButtonBefore.IsEnabled = true;
                 ruleButtonNext.IsEnabled = true;
             }
-            rulesBlock.Text = $" [{counter}/ 5] " + rules[counter - 1];
+            rulesBlock.Text = $" [{counter}/"+ rules.Length + "] " + rules[counter - 1];
         }
 
         public void CloseWindow(object sender, RoutedEventArgs e)

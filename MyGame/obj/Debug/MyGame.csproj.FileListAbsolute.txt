@@ -38,3 +38,25 @@ C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Author.g.cs
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Author.baml
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Game.g.cs
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Game.baml
+H:\МДК 13.03\git\WPF-Game\MyGame\bin\Debug\MyGame.exe.config
+H:\МДК 13.03\git\WPF-Game\MyGame\bin\Debug\MyGame.exe
+H:\МДК 13.03\git\WPF-Game\MyGame\bin\Debug\MyGame.pdb
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.AssemblyReference.cache
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\Author.g.cs
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\Game.g.cs
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MainWindow.g.cs
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\Rules.g.cs
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\App.g.cs
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame_MarkupCompile.cache
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame_MarkupCompile.lref
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\Author.baml
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\Game.baml
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MainWindow.baml
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\Rules.baml
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.g.resources
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.Properties.Resources.resources
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.GenerateResource.cache
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.exe
+H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.pdb

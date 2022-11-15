@@ -19,6 +19,7 @@
             <RowDefinition Height="50px" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="30" />
             <RowDefinition Height="50px" />
         </Grid.RowDefinitions>
@@ -27,9 +28,11 @@
                    Text="Рыба карась игра началась!"
                    FontStyle="Italic" FontWeight="Bold" FontSize="18" Foreground="#FF00E6CC" />
         <TextBlock  Grid.ColumnSpan="6" TextAlignment="Center" Grid.Row="1" Text="Где больше?"/>
-        <TextBlock  x:Name="firstNumber" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Text="1"/>
-        <TextBlock  x:Name="secondNumber" TextAlignment="Center" Grid.Row="2" Grid.Column="3" Text="2"/>
-        <Button x:Name="buttonLess" Content="Слева" Grid.Column="2"  Grid.Row="3" Width="70" Click="ButtonLeft"/>
-        <Button x:Name="buttonMore" Content="Справа" Grid.Column="3"  Grid.Row="3" Width="70" Click="ButtonRight"/>
+        <TextBlock  x:Name="firstNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="2" Text="1"/>
+        <TextBlock  x:Name="secondNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="3" Text="2"/>
+        <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=""/>
+        <TextBlock  x:Name="currentPlayer" TextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Text="Ходит игрок"/>
+        <Button x:Name="buttonLeft" Content="Слева" Grid.Column="2"  Grid.Row="4" Width="70" Click="ButtonLeft"/>
+        <Button x:Name="buttonRight" Content="Справа" Grid.Column="3"  Grid.Row="4" Width="70" Click="ButtonRight"/>
     </Grid>
 </Window>

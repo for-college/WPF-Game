@@ -5,20 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
-        Title="Виселица" Height="450" Width="700">
+        Title="Сборник математических игр" Height="450" Width="700">
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF0086B3"/>
-                <GradientStop Color="#FF4219A0" Offset="1"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="/backgroundMain.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="87*"/>
             <ColumnDefinition Width="90"></ColumnDefinition>
             <ColumnDefinition Width="300"></ColumnDefinition>
             <ColumnDefinition Width="90"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="110*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
@@ -29,75 +28,75 @@
             <RowDefinition Height="80"></RowDefinition>
             <RowDefinition Height="90"></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Grid.Column="2" CornerRadius="10" Height="30" VerticalAlignment="Bottom" Width="300">
+        <Border Grid.Column="4" CornerRadius="10" Height="30" VerticalAlignment="Top" Width="300" Margin="0,10,0,0">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFC300FF"/>
-                    <GradientStop Color="#FF5F00C3" Offset="1"/>
+                    <GradientStop Color="#FF00FF79"/>
+                    <GradientStop Color="Black" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
             <TextBlock TextAlignment="Center"
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
-                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="#FF00FFE2" Height="38" Width="300                        "><Run Language="ru-ru" Text="Где больше?"/></TextBlock>
+                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="White" Height="38">Кто умнее?</TextBlock>
         </Border>
-        <Button Grid.Column="4" 
+        <Button Grid.Column="6" 
                 VerticalAlignment="Top"
                 Height="30" Width="45" Content="Выход" Background="White" BorderBrush="Red" Foreground="Red" Click="CloseWindow" 
                 HorizontalAlignment="Right" />
-        <Button Grid.Row="3"  Grid.Column="1" 
+        <Button Grid.Row="3"  Grid.Column="3" 
                 Width="80" Height="40" 
-                Panel.ZIndex="1" HorizontalAlignment="Right" 
-                Content="Автор"  BorderBrush="#FF00FFE2" Foreground="#FF00FFE2" 
+                Panel.ZIndex="1" HorizontalAlignment="Left" 
+                Content="Автор"  BorderBrush="#FF30B900" 
                 FontWeight="Bold" FontSize="16" 
-                Click="OpenAuthorWindow">
+                Click="OpenAuthorWindow" Foreground="#FF30B900" Margin="10,20,0,20">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFC300FF"/>
-                    <GradientStop Color="#FF00BEE2" Offset="1"/>
-                </LinearGradientBrush>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    <GradientStop Color="White" Offset="0"/>
+                </RadialGradientBrush>
             </Button.Background>
         </Button>
 
 
-        <Button Grid.Column="3" 
+        <Button Grid.Column="5" 
                 Grid.Row="3" 
                 Content="Правила"
                 HorizontalAlignment="Left" 
                 Width="80" Height="40" 
                 VerticalAlignment="Center" 
-                Click="ShowRules" BorderBrush="#FF00FFE2" Foreground="#FF00FFE2" 
+                Click="ShowRules" BorderBrush="#FF30B900" Foreground="#FF30B900" 
                 FontWeight="Bold" FontSize="16" Panel.ZIndex="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFC300FF" Offset="0.003"/>
-                    <GradientStop Color="#FF00BEE2" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.997"/>
+                    <GradientStop Color="#FFE8E8E8" Offset="0"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
 
-        <Button Grid.Column="2" 
+        <Button Grid.Column="4" 
                 Grid.Row="3" 
                 Content="Играть" 
-                Width="90" Height="40" BorderBrush="#FF00FFE2" Foreground="#FF00FFE2" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Click="OpenGame">
+                Width="90" Height="40" BorderBrush="#FF30B900" Foreground="#FF30B900" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Click="OpenGame" Margin="105,20,105,20">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFC300FF"/>
-                    <GradientStop Color="#FF00BEE2" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFE8E8E8" Offset="0"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
 
         <Label Grid.Row="2" 
-               Grid.Column="1" 
+               Grid.Column="3" 
                Content="Игрок 1"
                HorizontalAlignment="Right"
                Height="30"
-               FontSize="18" FontWeight="Bold" Panel.ZIndex="1" Grid.RowSpan="2" VerticalAlignment="Top">
+               FontSize="18" FontWeight="Bold" Panel.ZIndex="1" VerticalAlignment="Top">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF169AAB"/>
-                    <GradientStop Color="#FF00E2FF" Offset="1"/>
+                    <GradientStop Color="#FF30B900" Offset="1"/>
                 </LinearGradientBrush>
             </Label.Foreground>
             <Label.OpacityMask>
@@ -110,14 +109,13 @@
         <TextBox 
             x:Name="player1"
                  Grid.Row="2" 
-                 Grid.Column="1" 
+                 Grid.Column="3" 
                  Width="80" Height="20" 
                  HorizontalAlignment="Right" 
                  VerticalAlignment="Bottom" Panel.ZIndex="1"/>
 
         <Label Grid.Row="2" 
-               Grid.Column="3" 
-               Grid.RowSpan="2"
+               Grid.Column="5"
                Content="Игрок 2"
                Height="30"
                HorizontalAlignment="Left"
@@ -125,22 +123,48 @@
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF008DA0" Offset="0"/>
-                    <GradientStop Color="#FF00E2FF" Offset="1"/>
+                    <GradientStop Color="#FF30B900" Offset="1"/>
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
         <TextBox x:Name="player2"
                  Grid.Row="2" 
-                 Grid.Column="3" 
+                 Grid.Column="5" 
                  Width="80" Height="20"
                  VerticalAlignment="Bottom" HorizontalAlignment="Left" Panel.ZIndex="1"/>
-        <Border Grid.Row="2" Grid.RowSpan="3" CornerRadius="25" Grid.Column="1" Grid.ColumnSpan="3">
+        <Border Grid.Row="2" Grid.RowSpan="3" CornerRadius="25" Grid.Column="3" Grid.ColumnSpan="3">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFEDEDED"/>
-                    <GradientStop Color="White" Offset="0.99"/>
+                    <GradientStop Color="#7FFFFFFF" Offset="0.99"/>
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
+        <TextBox 
+            x:Name="rounds"
+            Grid.Row="2" 
+            Grid.Column="4" 
+            Width="80" Height="20" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" Panel.ZIndex="1" Margin="0,30,0,0"/>
+        <Label Grid.Row="2" 
+            Grid.Column="4" 
+            Content="Количество раундов"
+            HorizontalAlignment="Center"
+            Height="30"
+            FontSize="18" FontWeight="Bold" Panel.ZIndex="1" VerticalAlignment="Top">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF169AAB"/>
+                    <GradientStop Color="#FF30B900" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+            <Label.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.OpacityMask>
+        </Label>
     </Grid>
 </Window>
