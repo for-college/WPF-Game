@@ -28,8 +28,6 @@ namespace MyGame
         int score; // кол-во очков игрока
         int roundsAmount = Data.rounds; // кол-во раундов
         int currentRound = 1; // текущий раунд
-        int player1_result; // кол-во очков игрока 1 
-        int player2_result; // кол-во очков игрока 2
         int temp; // 
         string name1 = Data.playerOne;
         string name2 = Data.playerTwo;
@@ -72,34 +70,26 @@ namespace MyGame
         private void TheEnd()
         {
             temp++;
-            int scoreShow = score == 0 ? score : score + 1;
+            int scoreShow = score == 0 || score < 5 ? score : score + 1;
             MessageBox.Show($"Очков набрано: {scoreShow}", "Конец раунда");
             currentPlayer.Text = $"Настала очередь игрока {name2}!";
             rounds.Text = "[1/" + Data.rounds + "]";
             if (temp > 1)
             {
-                player2_result = score;
-                if (player1_result > player2_result)
-                {
-                    MessageBox.Show($"Выиграл {name1}!", "Конец игры");
-                    Close();
-                }
-                else if(player1_result == player2_result)
-                {
-                    MessageBox.Show($"Ничья!", "Конец игры");
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show($"Выиграл {name2}!", "Конец игры");
-                    Close();
-                }
+                Data.player2_result = score; // передача кол-ва очков в другое окно
+                OpenWinner();
                
             }
-            else player1_result = score;
+            else Data.player1_result = score; // передача кол-ва очков в другое окно
             currentRound = 1;
             score = 0;
             Random();
+        }
+        private void OpenWinner()
+        {
+            Winner winner = new Winner();
+            winner.ShowDialog();
+            Close();
         }
     }
 }

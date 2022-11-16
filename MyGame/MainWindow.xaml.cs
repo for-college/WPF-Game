@@ -44,17 +44,12 @@ namespace MyGame
 
         private void OpenGame(object sender, RoutedEventArgs e)
         {
-            if (player1.Text == "" || player2.Text == "") MessageBox.Show("Заполните все поля!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            if (player1.Text == "" || player2.Text == "") MessageBox.Show("Заполните обязательные!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
             else
             {
-                if(rounds.Text == "")
-                {
-                    Data.rounds = 5;
-                }
-                else
-                {
-                    Data.rounds = Convert.ToInt32(rounds.Text);
-                }
+                if (rounds.Text == "") Data.rounds = 5;
+                else if (rounds.Text != "") Data.rounds = Convert.ToInt32(rounds.Text);
+                else MessageBox.Show("Неверное количество раундов!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 Data.playerOne = player1.Text;
                 Data.playerTwo = player2.Text;
 

@@ -1,0 +1,25 @@
+﻿<Window x:Class="MyGame.Winner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyGame"
+        mc:Ignorable="d"
+        Title="Winner" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="winnerTitle" VerticalAlignment="Center" TextAlignment="Center" Foreground="#FF30B900" FontSize="48">А вот и он - <Span Foreground="#FF42FF00">победитель!</Span></TextBlock>
+        <TextBlock x:Name="showWinner" Text="Выиграл игрок" VerticalAlignment="Center" TextAlignment="Center" Grid.Row="1" FontSize="36">
+            <TextBlock.Foreground>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF1A8451"/>
+                    <GradientStop Color="#FF00FF84" Offset="1"/>
+                </RadialGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+    </Grid>
+</Window>

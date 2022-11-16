@@ -11,5 +11,7 @@ namespace MyGame
         public static string playerOne { get; set; }
         public static string playerTwo { get; set; }
         public static int rounds { get; set; }
+        public static int player1_result { get; set; }
+        public static int player2_result { get; set; }
     }
 }
