@@ -62,3 +62,4 @@ H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.exe
 H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\MyGame.pdb
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Winner.g.cs
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\Winner.baml
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\App.baml
