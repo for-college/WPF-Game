@@ -37,7 +37,7 @@
             <Button x:Name="buttonLeft" Content="Слева"   Click="ButtonLeft" BorderThickness="0" Background="Transparent"/>
         </Border>
         <Border Grid.Column="3"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
-            <Button x:Name="buttonRight" Content="Слева"   Click="ButtonLeft" BorderThickness="0" Background="Transparent"/>
+            <Button x:Name="buttonRight" Content="Справа"   Click="ButtonRight" BorderThickness="0" Background="Transparent"/>
         </Border>
     </Grid>
 </Window>
