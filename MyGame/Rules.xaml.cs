@@ -64,9 +64,6 @@ namespace MyGame
             rulesBlock.Text = $" [{counter}/"+ rules.Length + "] " + rules[counter - 1];
         }
 
-        public void CloseWindow(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
+        public void CloseWindow(object sender, RoutedEventArgs e) => Close();
     }
 }

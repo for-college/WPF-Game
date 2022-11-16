@@ -38,28 +38,24 @@
                 VerticalAlignment="Top"
                 Height="20" Width="45" Content="Выход" Background="#FFFF3737" BorderBrush="#FFFF3737" Foreground="White" Click="CloseWindow" 
                 HorizontalAlignment="Right" FontStyle="Italic" />
-        <Button Grid.Row="3"  Grid.Column="3" 
-                Width="80" Height="40" 
-                Panel.ZIndex="1" HorizontalAlignment="Left" 
-                Content="Автор"  BorderBrush="#FF30B900" 
-                FontWeight="Bold" FontSize="16" 
-                Click="OpenAuthorWindow" Foreground="White" Margin="10,20,0,20" Background="#FF30B900"/>
-
+        <Button Grid.Row="3"  Grid.Column="3"   
+                Content="Автор" Click="OpenAuthorWindow"
+                Height="40" Foreground="#FF30B900" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Background="#03DDDDDD" BorderBrush="#00707070"/>
+        <Border Grid.Column="3"  Grid.Row="3" 
+                Width="90" Height="40" CornerRadius="10" BorderBrush="#FF30B900" BorderThickness="2" Panel.ZIndex="1" />
 
         <Button Grid.Column="5" 
-                Grid.Row="3" 
+                Grid.Row="3"
                 Content="Правила"
-                HorizontalAlignment="Left" 
-                Width="80" Height="40" 
-                VerticalAlignment="Center" 
-                Click="ShowRules" BorderBrush="#FF30B900" Foreground="White" 
-                FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Background="#FF30B900"/>
-
-        <Button Grid.Column="4" 
-                Grid.Row="3" 
-                Content="Играть" 
-                Width="90" Height="40" BorderBrush="#FF30B900" Foreground="White" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Click="OpenGame" Margin="105,20,105,20" Background="#FF30B900"/>
-
+                Click="ShowRules" Height="40" Foreground="#FF30B900" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Background="#03DDDDDD" BorderBrush="#00707070"/>
+        <Border Grid.Column="5"  Grid.Row="3"
+                Width="90" Height="40" CornerRadius="10" BorderBrush="#FF30B900" BorderThickness="2" Panel.ZIndex="1" />
+        
+        <Button Click="OpenGame" Grid.Column="4" Grid.Row="3" Content="Играть" 
+                Height="40" Width="90" Foreground="#FF30B900" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Background="#03DDDDDD" BorderBrush="#00707070" />
+        <Border Grid.Column="4"  Grid.Row="3" 
+                Width="90" Height="40" CornerRadius="10" BorderBrush="#FF30B900" BorderThickness="2" Panel.ZIndex="1"/>
+        
         <Label Grid.Row="2" 
                Grid.Column="3" 
                Content="Игрок 1"
@@ -108,8 +104,8 @@
         <Border Grid.Row="2" Grid.RowSpan="3" CornerRadius="25" Grid.Column="3" Grid.ColumnSpan="3">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEDEDED"/>
-                    <GradientStop Color="#7FFFFFFF" Offset="0.99"/>
+                    <GradientStop Color="#FF464646" Offset="1"/>
+                    <GradientStop Color="#7F000000" Offset="0.01"/>
                 </LinearGradientBrush>
             </Border.Background>
         </Border>

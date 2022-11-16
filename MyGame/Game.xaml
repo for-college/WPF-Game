@@ -32,7 +32,12 @@
         <TextBlock  x:Name="secondNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="3" Text="2"/>
         <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=""/>
         <TextBlock  x:Name="currentPlayer" TextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Text="Ходит игрок"/>
-        <Button x:Name="buttonLeft" Content="Слева" Grid.Column="2"  Grid.Row="4" Width="70" Click="ButtonLeft"/>
-        <Button x:Name="buttonRight" Content="Справа" Grid.Column="3"  Grid.Row="4" Width="70" Click="ButtonRight"/>
+        <!-- Кнопки -->
+        <Border Grid.Column="2"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
+            <Button x:Name="buttonLeft" Content="Слева"   Click="ButtonLeft" BorderThickness="0" Background="Transparent"/>
+        </Border>
+        <Border Grid.Column="3"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
+            <Button x:Name="buttonRight" Content="Слева"   Click="ButtonLeft" BorderThickness="0" Background="Transparent"/>
+        </Border>
     </Grid>
 </Window>

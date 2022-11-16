@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -28,19 +29,13 @@ namespace MyGame
         public Winner()
         {
             InitializeComponent();
-            if (player1_result > player2_result)
-            {
-                showWinner.Text += $" {name1}!";
-            }
+            if (player1_result > player2_result) showWinner.Text += $" {name1}!";
             else if (player1_result == player2_result)
             {
                 winnerTitle.Text = "Ничья";
                 showWinner.Text = "Победила дружба!";
             }
-            else
-            {
-                showWinner.Text += $" {name2}!";
-            }
+            else showWinner.Text += $" {name2}!";
         }
     }
 }

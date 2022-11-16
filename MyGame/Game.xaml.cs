@@ -48,7 +48,6 @@ namespace MyGame
             Random random = new Random(DateTime.Now.Millisecond);
             firstInt = random.Next(1, 5000);
             secondInt = random.Next(1, 5000);
-
             firstNumber.Text = firstInt.ToString();
             secondNumber.Text = secondInt.ToString();
         }
@@ -57,6 +56,7 @@ namespace MyGame
             if (currentRound < roundsAmount)
             {
                 if (a > b) score++;
+                // MessageBox.Show(firstInt + " " + secondInt);
                 Random();
                 Rounds();
             }
@@ -70,15 +70,14 @@ namespace MyGame
         private void TheEnd()
         {
             temp++;
-            int scoreShow = score == 0 || score < 5 ? score : score + 1;
-            MessageBox.Show($"Очков набрано: {scoreShow}", "Конец раунда");
+            //int scoreShow = score == 0 || score < 5 ? score : score + 1;
+            MessageBox.Show($"Очков набрано: {score}", "Конец раунда");
             currentPlayer.Text = $"Настала очередь игрока {name2}!";
             rounds.Text = "[1/" + Data.rounds + "]";
             if (temp > 1)
             {
                 Data.player2_result = score; // передача кол-ва очков в другое окно
                 OpenWinner();
-               
             }
             else Data.player1_result = score; // передача кол-ва очков в другое окно
             currentRound = 1;

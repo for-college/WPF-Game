@@ -24,19 +24,10 @@ namespace MyGame
         {
             InitializeComponent();
         }
-        public void CloseWindow(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
+        public void CloseWindow(object sender, RoutedEventArgs e) => Close();
 
-        private void OpenGitHub(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://github.com/scffs");
-        }
+        private void OpenGitHub(object sender, RoutedEventArgs e) => Process.Start("https://github.com/scffs");
 
-        private void OpenVK(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://vk.com/scoffs");
-        }
+        private void OpenVK(object sender, RoutedEventArgs e) => Process.Start("https://vk.com/scoffs");
     }
 }
