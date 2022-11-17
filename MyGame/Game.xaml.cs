@@ -55,6 +55,7 @@ namespace MyGame
             Random random = new Random(DateTime.Now.Millisecond);
             firstInt = random.Next(1, 5000);
             secondInt = random.Next(1, 5000);
+            if (firstInt == secondInt) Random();
             firstNumber.Text = firstInt.ToString();
             secondNumber.Text = secondInt.ToString();
         }

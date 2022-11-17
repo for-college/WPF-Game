@@ -23,12 +23,8 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.ColumnSpan="6" TextAlignment="Center"
-                   VerticalAlignment="Center"
-                   Text="Рыба карась игра началась!"
-                   FontStyle="Italic" FontWeight="Bold" FontSize="18" Foreground="#FF30B900" />
-        <Border Grid.Row="1" Grid.ColumnSpan="6" Width="200" Background="#FF30B900" CornerRadius="20">
-            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Text="Считай, друже" Foreground="White" FontSize="24"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="6" Width="350" Background="#FF30B900" CornerRadius="20">
+            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Text="Арифметика дело такое" Foreground="White" FontSize="24"/>
         </Border>
         <TextBlock  x:Name="example" TextAlignment="Center" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Text="1"/>
         

@@ -23,13 +23,7 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="50px" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.ColumnSpan="6" TextAlignment="Center"
-                   VerticalAlignment="Center"
-                   Text="Рыба карась игра началась!"
-                   FontStyle="Italic" FontWeight="Bold" FontSize="18" Foreground="#FF30B900" />
-        <Border Grid.Row="1" Grid.ColumnSpan="6" Width="200" Background="#FF30B900" CornerRadius="20">
-            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Text="Где больше?" Foreground="White" FontSize="24"/>
-        </Border>
+        <Image Source="more.jpg"  Grid.ColumnSpan="6" Grid.RowSpan="2" />
         <TextBlock  x:Name="firstNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="2" Text="1"/>
         <TextBlock  x:Name="secondNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="3" Text="2"/>
         <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=""/>

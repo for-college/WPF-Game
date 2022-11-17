@@ -48,12 +48,20 @@ namespace MyGame
             else if (number2 % 3 == 0) symb = "*";
             else symb = "/";
 
-            number1 = random.Next(1, 30);
-            number2 = random.Next(1, 40);
+            number1 = random.Next(1, 20);
+            number2 = random.Next(1, 10);
         }
         private void Answer(object sender, RoutedEventArgs e)
         {
-            if (exampleMass == Convert.ToInt32(exampleAnswer.Text)) score++;
+            try
+            {
+                if (exampleMass == Convert.ToInt32(exampleAnswer.Text)) score++;
+            }
+            catch
+            {
+                MessageBox.Show("Введены неверные данные. Игра продолжается.");
+            }
+            exampleAnswer.Text = "";
             Random();
             Gaming();
             currentRound++;
