@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
-        Title="Game" Height="450" Width="800">
+        Title="Где больше" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80" />
@@ -26,12 +26,14 @@
         <TextBlock Grid.ColumnSpan="6" TextAlignment="Center"
                    VerticalAlignment="Center"
                    Text="Рыба карась игра началась!"
-                   FontStyle="Italic" FontWeight="Bold" FontSize="18" Foreground="#FF00E6CC" />
-        <TextBlock  Grid.ColumnSpan="6" TextAlignment="Center" Grid.Row="1" Text="Где больше?"/>
+                   FontStyle="Italic" FontWeight="Bold" FontSize="18" Foreground="#FF30B900" />
+        <Border Grid.Row="1" Grid.ColumnSpan="6" Width="200" Background="#FF30B900" CornerRadius="20">
+            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Text="Где больше?" Foreground="White" FontSize="24"/>
+        </Border>
         <TextBlock  x:Name="firstNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="2" Text="1"/>
         <TextBlock  x:Name="secondNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="3" Text="2"/>
         <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=""/>
-        <TextBlock  x:Name="currentPlayer" TextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Text="Ходит игрок"/>
+        <TextBlock  x:Name="currentPlayer" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="Ходит игрок"/>
         <!-- Кнопки -->
         <Border Grid.Column="2"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
             <Button x:Name="buttonLeft" Content="Слева"   Click="ButtonLeft" BorderThickness="0" Background="Transparent"/>
