@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Security.AccessControl;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,56 +11,73 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace MyGame
 {
     /// <summary>
-    /// Логика взаимодействия для Game.xaml
+    /// Логика взаимодействия для Calc.xaml
     /// </summary>
-    public partial class Game : Window
+    public partial class Calc : Window
     {
-        int firstInt; // первое число (левое)
-        int secondInt; // второе число (правое)
-        int score = 0; // кол-во очков игрока
-        int roundsAmount = Data.rounds; // кол-во раундов
+        int exampleMass;
+        int score;
         int currentRound = Data.currentRound; // текущий раунд
-        int temp; // 
+        int number1;
+        int number2;
+        int roundsAmount = Data.rounds; // кол-во раундов
+        int temp;
+
         string name1 = Data.playerOne;
         string name2 = Data.playerTwo;
-
-        public Game()
+        static string symb;
+        public Calc()
         {
             InitializeComponent();
             Random();
-            rounds.Text = "[1/" + Data.rounds +  "]";
+            rounds.Text = "[1/" + Data.rounds + "]";
             currentPlayer.Text += $" {name1}!";
-
-        }
-        private void ButtonLeft(object sender, RoutedEventArgs e) => Gaming(firstInt, secondInt);
-
-        private void ButtonRight(object sender, RoutedEventArgs e) => Gaming(secondInt, firstInt);
-        private void Gaming(int a, int b)
-        {
-
-            if (a > b) ++score;
-            Random();
-            Rounds();
+            example.Text = $"{number1} {symb} {number2}";
         }
         public void Random()
         {
             Random random = new Random(DateTime.Now.Millisecond);
-            firstInt = random.Next(1, 5000);
-            secondInt = random.Next(1, 5000);
-            firstNumber.Text = firstInt.ToString();
-            secondNumber.Text = secondInt.ToString();
+            if (number1 + 1 % 2 == 0) symb = "+";
+            else if (number2 % 2 == 0) symb = "-";
+            else if (number2 % 3 == 0) symb = "*";
+            else symb = "/";
+
+            number1 = random.Next(1, 30);
+            number2 = random.Next(1, 40);
         }
-        public void Rounds()
+        private void Answer(object sender, RoutedEventArgs e)
         {
+            if (exampleMass == Convert.ToInt32(exampleAnswer.Text)) score++;
+            Random();
+            Gaming();
             currentRound++;
             if (currentRound > roundsAmount) TheEnd();
             rounds.Text = "[" + currentRound + "/" + Data.rounds + "]";
+        }
+        private void Gaming()
+        {
+            example.Text = $"{number1} {symb} {number2}";
+            switch (symb)
+            {
+                case "+":
+                    exampleMass = number1 + number2;
+                    break;
+                case "-":
+                    exampleMass = number1 - number2;
+                    break;
+                case "*":
+                    exampleMass = number1 * number2;
+                    break;
+                case "/":
+                    exampleMass = number1 / number2;
+                    break;
+            }
         }
         public void TheEnd()
         {
@@ -81,6 +96,5 @@ namespace MyGame
             score = 0;
             Random();
         }
-       
     }
 }

@@ -15,7 +15,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Background="#B2000000" Grid.RowSpan="2" Margin="0,42,0,0" CornerRadius="50" Width="650"></Border>
+        <Border Background="#B2000000" Grid.RowSpan="2" Margin="0,42,0,0" CornerRadius="50" Width="650" />
         <TextBlock x:Name="winnerTitle" VerticalAlignment="Bottom" TextAlignment="Center" Foreground="#FF30B900" FontSize="48">А вот и он - <Span Foreground="#FF42FF00">победитель!</Span></TextBlock>
         <TextBlock x:Name="showWinner" Text="Выиграл игрок" VerticalAlignment="Center" TextAlignment="Center" Grid.Row="1" FontSize="36">
             <TextBlock.Foreground>

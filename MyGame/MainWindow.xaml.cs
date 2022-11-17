@@ -40,7 +40,7 @@ namespace MyGame
             author.ShowDialog();
         }
 
-        private void OpenGame(object sender, RoutedEventArgs e)
+        private void OpenGameList(object sender, RoutedEventArgs e)
         {
             if (player1.Text == "" || player2.Text == "") MessageBox.Show("Заполните обязательные!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
             else
@@ -50,9 +50,10 @@ namespace MyGame
                 else MessageBox.Show("Неверное количество раундов!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 Data.playerOne = player1.Text;
                 Data.playerTwo = player2.Text;
-
-                Game game = new Game();
-                game.ShowDialog();
+                if (checkName1.IsChecked == false) player1.Text = "";
+                if (checkName2.IsChecked == false) player2.Text = "";
+                ChooseGame cg = new ChooseGame();
+                cg.ShowDialog();
             }
         }
     }

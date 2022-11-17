@@ -60,6 +60,12 @@
     <Compile Include="Author.xaml.cs">
       <DependentUpon>Author.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Calc.xaml.cs">
+      <DependentUpon>Calc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseGame.xaml.cs">
+      <DependentUpon>ChooseGame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Data.cs" />
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
@@ -71,6 +77,14 @@
       <DependentUpon>Winner.xaml</DependentUpon>
     </Compile>
     <Page Include="Author.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Calc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChooseGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="winner-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="choose.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

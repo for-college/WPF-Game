@@ -13,5 +13,11 @@ namespace MyGame
         public static int rounds { get; set; }
         public static int player1_result { get; set; }
         public static int player2_result { get; set; }
+        public static int currentRound = 1;
+        public static void OpenWinner()
+        {
+            Winner winner = new Winner();
+            winner.ShowDialog();
+        }
     }
 }
