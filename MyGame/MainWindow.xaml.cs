@@ -25,7 +25,6 @@ namespace MyGame
         {
             InitializeComponent();
         }
-
         private void ShowRules(object sender, RoutedEventArgs e)
         {
             Rules rules = new Rules();
@@ -42,19 +41,26 @@ namespace MyGame
 
         private void OpenGameList(object sender, RoutedEventArgs e)
         {
-            if (player1.Text == "" || player2.Text == "") MessageBox.Show("Заполните обязательные!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
-            else
+            if (rounds.Text == "") Data.rounds = 5;
+            try
             {
-                if (rounds.Text == "") Data.rounds = 5;
-                else if (rounds.Text != "") Data.rounds = Convert.ToInt32(rounds.Text);
-                else MessageBox.Show("Неверное количество раундов!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                Data.playerOne = player1.Text;
-                Data.playerTwo = player2.Text;
-                if (checkName1.IsChecked == false) player1.Text = "";
-                if (checkName2.IsChecked == false) player2.Text = "";
-                ChooseGame cg = new ChooseGame();
-                cg.ShowDialog();
+                if(rounds.Text != "") if (Convert.ToInt32(rounds.Text) > 0) Data.rounds = Convert.ToInt32(rounds.Text);
+                if (player1.Text != "" || player2.Text != "" && Convert.ToInt32(rounds.Text) > 0) GameList();
+                else MessageBox.Show("Заполните обязательные поля!", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            catch
+            {
+                MessageBox.Show("А количество раундов точно верно задано?", "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+        private void GameList()
+        {
+            Data.playerOne = player1.Text;
+            Data.playerTwo = player2.Text;
+            if (checkName1.IsChecked == false) player1.Text = "";
+            if (checkName2.IsChecked == false) player2.Text = "";
+            ChooseGame cg = new ChooseGame();
+            cg.ShowDialog();
         }
     }
 }
