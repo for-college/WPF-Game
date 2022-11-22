@@ -72,3 +72,31 @@ H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\Calc.g.cs
 H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\ChooseGame.g.cs
 H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\Calc.baml
 H:\МДК 13.03\git\WPF-Game\MyGame\obj\Debug\ChooseGame.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\bin\Debug\MyGame.exe.config
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\bin\Debug\MyGame.exe
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\bin\Debug\MyGame.pdb
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.AssemblyReference.cache
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Author.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Calc.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\ChooseGame.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Game.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MainWindow.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Rules.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Winner.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\App.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame_MarkupCompile.cache
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame_MarkupCompile.lref
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Author.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Calc.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\ChooseGame.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Game.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MainWindow.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Rules.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\Winner.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.g.resources
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.Properties.Resources.resources
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.GenerateResource.cache
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.exe
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.pdb
