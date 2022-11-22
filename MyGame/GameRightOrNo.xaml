@@ -1,0 +1,39 @@
+﻿<Window x:Class="MyGame.GameRightOrNo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyGame"
+        mc:Ignorable="d"
+        Title="GameRightOrNo" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="80" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50px" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50px" />
+        </Grid.RowDefinitions>
+        <Image Source="more.jpg"  Grid.ColumnSpan="6" Grid.RowSpan="2" />
+        <TextBlock  x:Name="firstNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="2" Text="1"/>
+        <TextBlock  x:Name="secondNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="3" Text="2"/>
+        <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=""/>
+        <TextBlock  x:Name="currentPlayer" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="Ходит игрок" FontFamily="Microsoft PhagsPa"/>
+        <!-- Кнопки -->
+        <Border Grid.Column="2"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
+            <Button x:Name="buttonFalse" Content="Слева"   Click="ButtonFalse" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
+        </Border>
+        <Border Grid.Column="3"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
+            <Button x:Name="buttonTrue" Content="Справа"   Click="ButtonTrue" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
+        </Border>
+    </Grid>
+</Window>

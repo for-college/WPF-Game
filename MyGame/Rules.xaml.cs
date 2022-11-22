@@ -27,24 +27,16 @@ namespace MyGame
         }
         int counter;
         string[] rules = {"Сначала играет игрок №1, затем очередь игрока №2.",
-                "Имена рекомендуется заполнять.",
+                "Имена обязательно заполнять.",
                 "В качестве количества раундов вводить строго целое положительное число.", "Если количество раундов не задано, то по умолчанию оно будет равно 5",
                 "После окончания игры вы можете начать снова, предыдущий результать не учитывается.",
                 "Удачной игры!"};
         private void NextRule(object sender, RoutedEventArgs e)
         {
-            if (counter == 1)
-            {
-                ruleButtonBefore.IsEnabled = true;
-            }
-            if (counter + 1 == rules.Length)
-            {
-                ruleButtonNext.IsEnabled = false;
-            }
-            else
-            {
-                ruleButtonNext.IsEnabled = true;
-            }
+            if (counter == 1) ruleButtonBefore.IsEnabled = true;
+            if (counter + 1 == rules.Length) ruleButtonNext.IsEnabled = false;
+
+            else ruleButtonNext.IsEnabled = true;
             rulesBlock.Text = $" [{counter + 1}/"+ rules.Length + "] " + rules[counter];
             counter++;
         }

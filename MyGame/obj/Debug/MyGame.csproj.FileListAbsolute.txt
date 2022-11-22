@@ -100,3 +100,5 @@ C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.GenerateR
 C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
 C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.exe
 C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.pdb
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\GameRightOrNo.g.cs
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\GameRightOrNo.baml
