@@ -18,14 +18,14 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="130"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Автор программы" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="4"/>
+        <TextBlock Text="Автор программы" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="5"/>
         <TextBlock Text="Меня зовут Семён. Ниже вы можете узнать обо мне побольше и даже увидеть другие мои работы!" 
-                   HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Grid.Row="2" Grid.ColumnSpan="4" Margin="10,0,0,0"/>
+                   HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Grid.Row="2" Grid.ColumnSpan="5" Margin="10,0,0,0"/>
         <!-- GitHub -->
         <Image Grid.Column="2" Grid.Row="3" Source="GH.png"></Image>
         <Button Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Ссылка на GitHub" 
@@ -36,9 +36,13 @@
         <Button Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Ссылка на VK" 
                 Click="OpenVK" Width="110"
                 BorderBrush="Black" Foreground="Black" Background="Transparent" />
+        <Image Grid.Column="3" Grid.Row="3" Source="/ava 1.png"></Image>
+        <Button Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Ссылка на мой сайт" 
+                Click="OpenWeb" Width="120"
+                BorderBrush="Black" Foreground="Black" Background="Transparent" />
         <!-- Выход -->
         <Button VerticalAlignment="Top"
                 Width="70" Height="20" Content="Закрыть" Background="White" BorderBrush="Red" Foreground="Red" Click="CloseWindow" 
-                HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Column="3"/>
+                HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Column="4"/>
     </Grid>
 </Window>
