@@ -28,7 +28,7 @@
         </Border>
         <TextBlock  x:Name="example" TextAlignment="Center" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Text="1"/>
         
-        <TextBox  x:Name="exampleAnswer" TextAlignment="Center" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Text="1" VerticalAlignment="Top" Width="50"/>
+        <TextBox  x:Name="exampleAnswer" TextAlignment="Center" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Text="" VerticalAlignment="Top" Width="50"/>
         
         <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=""/>
         <TextBlock  x:Name="currentPlayer" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="Считает игрок"/>
