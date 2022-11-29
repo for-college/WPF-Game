@@ -23,14 +23,12 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="50px" />
         </Grid.RowDefinitions>
-        <Image Source="more.jpg"  Grid.ColumnSpan="6" Grid.RowSpan="2" />
-        <TextBlock  x:Name="firstNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="2" Text="1"/>
-        <TextBlock  x:Name="secondNumber" TextAlignment="Center" Grid.Row="3" Grid.Column="3" Text="2"/>
+        <TextBlock  x:Name="questionScreen" TextAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" Text=""/>
         <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=""/>
         <TextBlock  x:Name="currentPlayer" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="Ходит игрок" FontFamily="Microsoft PhagsPa"/>
         <!-- Кнопки -->
         <Border Grid.Column="2"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
-            <Button x:Name="buttonFalse" Content="Неверно"   Click="ButtonFalse" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
+            <Button x:Name="buttonFalse" Content="Неверно" Click="ButtonFalse" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
         </Border>
         <Border Grid.Column="3"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
             <Button x:Name="buttonTrue" Content="Верно" Click="ButtonTrue" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>

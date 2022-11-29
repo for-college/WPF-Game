@@ -23,10 +23,10 @@ namespace MyGame
     {
         double exampleMass;
         int score = 0;
-        int currentRound = Data.currentRound; // текущий раунд
+        int currentRound = Data.currentRound; 
         int number1;
         int number2;
-        int roundsAmount = Data.rounds; // кол-во раундов
+        int roundsAmount = Data.rounds;
         int temp;
 
         string name1 = Data.playerOne;

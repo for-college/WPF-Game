@@ -23,12 +23,12 @@ namespace MyGame
     /// </summary>
     public partial class Game : Window
     {
-        int firstInt; // первое число (левое)
-        int secondInt; // второе число (правое)
-        int score = 0; // кол-во очков игрока
-        int roundsAmount = Data.rounds; // кол-во раундов
-        int currentRound = Data.currentRound; // текущий раунд
-        int temp; // 
+        int firstInt; 
+        int secondInt;
+        int score;
+        int roundsAmount = Data.rounds;
+        int currentRound = Data.currentRound;
+        int temp;
         string name1 = Data.playerOne;
         string name2 = Data.playerTwo;
 
