@@ -73,11 +73,11 @@ namespace MyGame
             rounds.Text = "[1/" + Data.rounds + "]";
             if (temp > 1)
             {
-                Data.player2_result = score; // передача кол-ва очков в другое окно
+                Data.player2_result = score;
                 Data.OpenWinner();
                 Close();
             }
-            else Data.player1_result = score; // передача кол-ва очков в другое окно
+            else Data.player1_result = score;
             currentRound = 1;
             score = 0;
             Random();

@@ -24,7 +24,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Button Grid.Column="1" Content="Считай или проиграешь" Click="Calc" 
-                Grid.Row="2" Width="175" Height="40" BorderBrush="#00707070">
+                Grid.Row="2" Width="175" Height="40" BorderBrush="#00707070" FontWeight="Bold" Foreground="White" FontSize="16" FontFamily="Bahnschrift Light SemiCondensed">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF009051"/>
@@ -33,7 +33,7 @@
             </Button.Background>
         </Button>
         <Button Grid.Column="1" Content="Где больше?" Click="OpenWhereMore" Grid.Row="3"
-                Width="175" Height="40" BorderBrush="#00707070">
+                Width="175" Height="40" BorderBrush="#00707070" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF7B9000"/>
@@ -41,10 +41,19 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Border Grid.Row="0" Grid.Column="1" Width="200" Background="#FF30B900" CornerRadius="20" Height="35">
-            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Text="Выбор за тобой" Foreground="White" FontSize="24"/>
+        <Border Grid.Row="0" Grid.Column="1" Width="200" Background="White" CornerRadius="20" Height="35">
+            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Text="Выбор за тобой" FontSize="24" FontWeight="Bold">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF5200"/>
+                        <GradientStop Color="#FFB30F0F" Offset="1"/>
+                        <GradientStop Color="#FF077EDA" Offset="0.483"/>
+                        <GradientStop Color="#FE3731EA" Offset="0.24"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
         </Border>
-        <Button Grid.Column="1" Content="Верно ли?" Click="OpenIsItRight" Grid.Row="4"   Width="175" Height="40" BorderBrush="#00707070">
+        <Button Grid.Column="1" Content="Верно ли?" Click="OpenIsItRight" Grid.Row="4"   Width="175" Height="40" BorderBrush="#00707070" FontWeight="Bold" Foreground="White" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF009080"/>

@@ -38,7 +38,8 @@ namespace MyGame
 
         private void OpenIsItRight(object sender, RoutedEventArgs e)
         {
-
+            GameRightOrNo right = new GameRightOrNo();
+            right.Show();
         }
     }
 }

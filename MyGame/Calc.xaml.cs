@@ -21,8 +21,8 @@ namespace MyGame
     /// </summary>
     public partial class Calc : Window
     {
-        int exampleMass;
-        int score;
+        double exampleMass;
+        int score = 0;
         int currentRound = Data.currentRound; // текущий раунд
         int number1;
         int number2;
@@ -36,6 +36,7 @@ namespace MyGame
         {
             InitializeComponent();
             Random();
+            Gaming();
             rounds.Text = "[1/" + Data.rounds + "]";
             currentPlayer.Text += $" {name1}!";
             example.Text = $"{number1} {symb} {number2}";
@@ -55,7 +56,7 @@ namespace MyGame
         {
             try
             {
-                if (exampleMass == Convert.ToInt32(exampleAnswer.Text)) score++;
+                if (exampleMass == Convert.ToDouble(exampleAnswer.Text)) score++;
             }
             catch
             {
@@ -95,11 +96,11 @@ namespace MyGame
             rounds.Text = "[1/" + Data.rounds + "]";
             if (temp > 1)
             {
-                Data.player2_result = score; // передача кол-ва очков в другое окно
+                Data.player2_result = score;
                 Data.OpenWinner();
                 Close();
             }
-            else Data.player1_result = score; // передача кол-ва очков в другое окно
+            else Data.player1_result = score;
             currentRound = 1;
             score = 0;
             Random();

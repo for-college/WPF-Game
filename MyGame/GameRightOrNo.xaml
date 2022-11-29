@@ -30,10 +30,10 @@
         <TextBlock  x:Name="currentPlayer" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="Ходит игрок" FontFamily="Microsoft PhagsPa"/>
         <!-- Кнопки -->
         <Border Grid.Column="2"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
-            <Button x:Name="buttonFalse" Content="Слева"   Click="ButtonFalse" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
+            <Button x:Name="buttonFalse" Content="Неверно"   Click="ButtonFalse" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
         </Border>
         <Border Grid.Column="3"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
-            <Button x:Name="buttonTrue" Content="Справа"   Click="ButtonTrue" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
+            <Button x:Name="buttonTrue" Content="Верно" Click="ButtonTrue" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
         </Border>
     </Grid>
 </Window>
