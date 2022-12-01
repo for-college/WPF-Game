@@ -22,16 +22,19 @@ namespace MyGame
     {
         Random random = new Random(DateTime.Now.Millisecond);
 
-        int[] answered = new int[amountQuestions];
-        int score;
+        List<string[,]> data = new List<string[,]>();
+
         int count;
+        int[] answered = new int[9];
+        int score;
+        // int[] count = new int[10];
         int roundsAmount = Data.rounds;
         int currentRound = Data.currentRound;
         int temp;
         static int currentQuestion;
         string name1 = Data.playerOne;
         string name2 = Data.playerTwo;
-        static int amountQuestions = 9;
+        // static int amountQuestions = questions.GetLength(0);
         string[,] questions = {  { "Каждый внешний угол из треугольника является столь же большим как два не примыкающим внутренним углом вместе", "1" },
                                      { "В прямоугольном треугольнике сумма квадратов длин катетов равна кубу длины гипотенузы.", "0" },
                                      { "Квадрат длины стороны треугольника равен сумме квадратов длин других сторон минус удвоенное произведение длин этих сторон на косинус угла между ними.", "1" },
@@ -48,6 +51,11 @@ namespace MyGame
             rounds.Text = "[1/" + Data.rounds + "]";
             currentPlayer.Text += $" {name1}!";
             questionScreen.Text = $"{questions[currentQuestion, 0]}";
+
+            for (int i = 0; i < questions.GetLength(0); i++)
+            {
+                data.Add(new string[,] { { questions[i, 0], questions[i, 1] } });
+            }
         }
         private void ButtonFalse(object sender, RoutedEventArgs e) => Gaming(0);
 
@@ -67,18 +75,31 @@ namespace MyGame
                     break;
                 }
             }
-            answered[currentQuestion] = currentQuestion;
-          
-            Random();
-            
-            IsReplay();
+            if (data.Count > 0)
+            {
+                int Rand = new Random().Next(0, data.Count);
+
+                string text = data[Rand][0, 0];
+                // bool status = data[Rand][0, 1] == "1" ? true : false;
+
+                data.RemoveAt(Rand);
+                questionScreen.Text = text;
+            }
+            else
+            {
+                questionScreen.Text = "Элементы закончились!";
+            }
+            // answered[currentQuestion] = currentQuestion;
+            // Random();
             Rounds();
         }
         public void Random()
         {
-            currentQuestion = random.Next(0, questions.GetLength(0));
-            questionScreen.Text = $"{questions[currentQuestion, 0]}";
-            
+            count++;
+            // currentQuestion = random.Next(0, questions.GetLength(0));
+           
+
+            //questionScreen.Text = $"{questions[currentQuestion, 0]}";
         }
         public void Rounds()
         {
@@ -101,13 +122,9 @@ namespace MyGame
             else Data.player1_result = score;
             currentRound = 1;
             score = 0;
-            count = 0;
+
+            for (int i = 0; i < answered.Length; i++) answered[i] = 0;
             Random();
-        }
-        private void IsReplay()
-        {
-            
-           
         }
     }
 }
