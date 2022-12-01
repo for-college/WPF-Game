@@ -20,6 +20,8 @@ namespace MyGame
     /// </summary>
     public partial class GameRightOrNo : Window
     {
+        Random random = new Random(DateTime.Now.Millisecond);
+
         int[] answered = new int[amountQuestions];
         int score;
         int count;
@@ -66,17 +68,17 @@ namespace MyGame
                 }
             }
             answered[currentQuestion] = currentQuestion;
-            //count++;
-            for(int i = 0; i < answered.Length; i++) if (currentQuestion == answered[i]) Random();
+          
             Random();
+            
+            IsReplay();
             Rounds();
         }
         public void Random()
         {
-            Random random = new Random(DateTime.Now.Millisecond);
             currentQuestion = random.Next(0, questions.GetLength(0));
             questionScreen.Text = $"{questions[currentQuestion, 0]}";
-
+            
         }
         public void Rounds()
         {
@@ -101,6 +103,11 @@ namespace MyGame
             score = 0;
             count = 0;
             Random();
+        }
+        private void IsReplay()
+        {
+            
+           
         }
     }
 }
