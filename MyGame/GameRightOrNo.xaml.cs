@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MyGame
 {
@@ -19,14 +20,16 @@ namespace MyGame
     /// </summary>
     public partial class GameRightOrNo : Window
     {
-        string[,] answered;
+        int[] answered = new int[amountQuestions];
         int score;
+        int count;
         int roundsAmount = Data.rounds;
         int currentRound = Data.currentRound;
         int temp;
         static int currentQuestion;
         string name1 = Data.playerOne;
         string name2 = Data.playerTwo;
+        static int amountQuestions = 9;
         string[,] questions = {  { "Каждый внешний угол из треугольника является столь же большим как два не примыкающим внутренним углом вместе", "1" },
                                      { "В прямоугольном треугольнике сумма квадратов длин катетов равна кубу длины гипотенузы.", "0" },
                                      { "Квадрат длины стороны треугольника равен сумме квадратов длин других сторон минус удвоенное произведение длин этих сторон на косинус угла между ними.", "1" },
@@ -62,7 +65,9 @@ namespace MyGame
                     break;
                 }
             }
-            currentQuestion++;
+            answered[currentQuestion] = currentQuestion;
+            //count++;
+            for(int i = 0; i < answered.Length; i++) if (currentQuestion == answered[i]) Random();
             Random();
             Rounds();
         }
@@ -94,6 +99,7 @@ namespace MyGame
             else Data.player1_result = score;
             currentRound = 1;
             score = 0;
+            count = 0;
             Random();
         }
     }
