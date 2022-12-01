@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
@@ -62,44 +63,35 @@ namespace MyGame
         private void ButtonTrue(object sender, RoutedEventArgs e) => Gaming(1);
         private void Gaming(int a)
         {
-            for(int i = 0; i < questions.GetLength(0); i++)
-            {
-                if (a == 0 && questions[currentQuestion, 1] == "0")
-                {
-                    score++; 
-                    break;
-                }
-                else if (a == 1 && questions[currentQuestion, 1] == "1")
-                {
-                    score++;
-                    break;
-                }
-            }
+            Storyboard storyboard = new Storyboard();
+            DoubleAnimation doubleAnimation= new DoubleAnimation();
+
+            doubleAnimation.From= 0;
+            doubleAnimation.To= 1;
+            doubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
+            storyboard.Children.Add(doubleAnimation);
+            Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath(OpacityProperty));
+            Storyboard.SetTargetName(doubleAnimation, questionScreen.Name);
+            storyboard.Begin(this);
+
+            int Rand = new Random().Next(0, data.Count);
+
+            string text = data[Rand][0, 0];
+            bool status = data[Rand][0, 1] == "1" ? true : false;
             if (data.Count > 0)
             {
-                int Rand = new Random().Next(0, data.Count);
-
-                string text = data[Rand][0, 0];
-                // bool status = data[Rand][0, 1] == "1" ? true : false;
-
                 data.RemoveAt(Rand);
                 questionScreen.Text = text;
+                if (status) score++;
             }
-            else
-            {
-                questionScreen.Text = "Элементы закончились!";
-            }
-            // answered[currentQuestion] = currentQuestion;
-            // Random();
+
+            
+            Random();
             Rounds();
         }
         public void Random()
         {
-            count++;
-            // currentQuestion = random.Next(0, questions.GetLength(0));
            
-
-            //questionScreen.Text = $"{questions[currentQuestion, 0]}";
         }
         public void Rounds()
         {
