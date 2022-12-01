@@ -102,3 +102,5 @@ C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.exe
 C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\MyGame.pdb
 C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\GameRightOrNo.g.cs
 C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\GameRightOrNo.baml
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\GameRightOrNo.g.cs
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\GameRightOrNo.baml

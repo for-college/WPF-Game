@@ -59,9 +59,8 @@ namespace MyGame
                 else if (a == 1 && questions[currentQuestion, 1] == "1")
                 {
                     score++;
-                    break
+                    break;
                 }
-                
             }
             currentQuestion++;
             Random();

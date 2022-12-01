@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Author" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/proger.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="*" />
@@ -17,29 +20,33 @@
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition Width="130"/>
-            <ColumnDefinition Width="130"/>
-            <ColumnDefinition Width="130"/>
-            <ColumnDefinition />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Автор программы" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="5"/>
-        <TextBlock Text="Меня зовут Семён. Ниже вы можете узнать обо мне побольше и даже увидеть другие мои работы!" 
-                   HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Grid.Row="2" Grid.ColumnSpan="5" Margin="10,0,0,0"/>
+        <Border Grid.Row="1" Grid.RowSpan="5" CornerRadius="50" Grid.Column="1" Grid.ColumnSpan="3" Background="#CC000000" Margin="0,64,0,33"/>
+        <Border Grid.Column="1" CornerRadius="5" Height="40" VerticalAlignment="Center" Width="300" Background="#FF30B900" Grid.ColumnSpan="3">
+            <TextBlock TextAlignment="Center"
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" 
+                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="White" Height="38" Width="390" Margin="0,2,0,0" Text="Связь с разработчиком" />
+        </Border>
         <!-- GitHub -->
-        <Image Grid.Column="2" Grid.Row="3" Source="GH.png"></Image>
-        <Button Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Ссылка на GitHub" 
-                Click="OpenGitHub" Width="110"
-                BorderBrush="Black" Foreground="Black" Background="Transparent" />
+        <Image Grid.Column="2" Grid.Row="3" Source="/gh-light.png"></Image>
+        <Button Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="GitHub профиль" 
+                Click="OpenGitHub" Width="120"
+                BorderBrush="#FF30B900" Foreground="#FF30B900" Background="Transparent" />
         <!-- ВК -->
         <Image Grid.Column="1" Grid.Row="3" Source="VKW.png"></Image>
-        <Button Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Ссылка на VK" 
-                Click="OpenVK" Width="110"
-                BorderBrush="Black" Foreground="Black" Background="Transparent" />
+        <Button Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Страница ВК" 
+                Click="OpenVK" Width="120"
+                BorderBrush="#FF30B900" Foreground="#FF30B900" Background="Transparent" />
         <Image Grid.Column="3" Grid.Row="3" Source="/ava 1.png"></Image>
-        <Button Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Ссылка на мой сайт" 
+        <Button Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Личный сайт" 
                 Click="OpenWeb" Width="120"
-                BorderBrush="Black" Foreground="Black" Background="Transparent" />
+                BorderBrush="#FF30B900" Foreground="#FF30B900" Background="Transparent" />
         <!-- Выход -->
         <Button VerticalAlignment="Top"
                 Width="70" Height="20" Content="Закрыть" Background="White" BorderBrush="Red" Foreground="Red" Click="CloseWindow" 
