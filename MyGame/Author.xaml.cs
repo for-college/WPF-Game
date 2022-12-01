@@ -28,7 +28,7 @@ namespace MyGame
 
         private void OpenGitHub(object sender, RoutedEventArgs e) => Process.Start("https://github.com/scffs");
 
-        private void OpenVK(object sender, RoutedEventArgs e) => Process.Start("https://vk.com/scoffs");
+        private void OpenVK(object sender, RoutedEventArgs e) => Process.Start("https://vk.com/scffs");
         private void OpenWeb(object sender, RoutedEventArgs e) => Process.Start("https://scffs.github.io/dev/");
     }
 }

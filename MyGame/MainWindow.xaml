@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
-        Title="Сборник математических игр" Height="450" Width="700">
+        Title="Сборник математических игр" Height="350" Width="700">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/backgroundMain.jpg"/>
@@ -13,25 +13,24 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="17*"/>
             <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="300" />
-            <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="110*" />
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="110*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="120" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="90" />
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Column="3" CornerRadius="10" Height="30" VerticalAlignment="Top" Width="300" Margin="0,10,0,0" Background="#FF30B900">
+        <Border Grid.Column="2" CornerRadius="5" Height="40" VerticalAlignment="Center" Width="400" Background="#FF30B900" Grid.ColumnSpan="3">
             <TextBlock TextAlignment="Center"
-                   VerticalAlignment="Center" 
+                   VerticalAlignment="Top" 
                    HorizontalAlignment="Center" 
-                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="White" Height="38">Кто умнее?</TextBlock>
+                   FontSize="24" FontStyle="Italic" FontWeight="Bold" Foreground="White" Height="38" Width="390" Margin="0,2,0,0" Text="Сборник математических игр" />
         </Border>
         <Button Grid.Column="5" 
                 VerticalAlignment="Top"
@@ -49,20 +48,14 @@
                 Click="ShowRules" Height="40" Foreground="#FF30B900" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Background="#03DDDDDD" BorderBrush="#00707070" Width="90"/>
         <Border Grid.Column="4"  Grid.Row="3"
                 Width="90" Height="40" CornerRadius="10" BorderBrush="#FF30B900" BorderThickness="2" Panel.ZIndex="1" />
-        
+
         <Button Click="OpenGameList" Grid.Column="3" Grid.Row="3" Content="Играть" 
                 Height="40" Width="90" Foreground="#FF30B900" FontWeight="Bold" FontSize="16" Panel.ZIndex="1" Background="#03DDDDDD" BorderBrush="#00707070" />
         <Border Grid.Column="3"  Grid.Row="3" 
                 Width="90" Height="40" CornerRadius="10" BorderBrush="#FF30B900" BorderThickness="2" Panel.ZIndex="1"/>
-        
+
         <Label Grid.Row="2" Grid.Column="2" Content="Игрок 1"
-               HorizontalAlignment="Center" Height="30" FontSize="18" FontWeight="Bold" Panel.ZIndex="1" VerticalAlignment="Top">
-            <Label.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF169AAB"/>
-                    <GradientStop Color="#FF30B900" Offset="1"/>
-                </LinearGradientBrush>
-            </Label.Foreground>
+               HorizontalAlignment="Center" Height="30" FontSize="18" FontWeight="Bold" Panel.ZIndex="1" VerticalAlignment="Top" Foreground="#FF30B900">
             <Label.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -74,27 +67,13 @@
                  Width="80" Height="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
 
         <Label Grid.Row="2" Grid.Column="4" Content="Игрок 2" 
-               Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Panel.ZIndex="1" FontWeight="Bold">
-            <Label.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF008DA0" Offset="0"/>
-                    <GradientStop Color="#FF30B900" Offset="1"/>
-                </LinearGradientBrush>
-            </Label.Foreground>
-        </Label>
+               Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Panel.ZIndex="1" FontWeight="Bold" Foreground="#FF30B900"/>
         <TextBox x:Name="player2" Grid.Row="2" Grid.Column="4" 
                  Width="80" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Center" Panel.ZIndex="1"/>
         <CheckBox x:Name="checkName2" IsChecked="False" Content="Запомнить имя"
                   Height="20" Grid.Column="4"  Grid.Row="3" VerticalAlignment="Top" Panel.ZIndex="1" Foreground="White" FontSize="12" HorizontalAlignment="Center"/>
-        
-        <Border Grid.Row="2" Grid.RowSpan="3" CornerRadius="25" Grid.Column="2" Grid.ColumnSpan="3">
-            <Border.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF464646" Offset="1"/>
-                    <GradientStop Color="#7F000000"/>
-                </LinearGradientBrush>
-            </Border.Background>
-        </Border>
+
+        <Border Grid.Row="1" Grid.RowSpan="4" CornerRadius="25" Grid.Column="2" Grid.ColumnSpan="4" Background="#CC000000" Margin="1,30,50,30"/>
         <TextBox 
             x:Name="rounds"
             Grid.Row="2" 
@@ -107,13 +86,7 @@
             Content="Количество раундов"
             HorizontalAlignment="Center"
             Height="30"
-            FontSize="18" FontWeight="Bold" Panel.ZIndex="1" VerticalAlignment="Top">
-            <Label.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF169AAB"/>
-                    <GradientStop Color="#FF30B900" Offset="1"/>
-                </LinearGradientBrush>
-            </Label.Foreground>
+            FontSize="18" FontWeight="Bold" Panel.ZIndex="1" VerticalAlignment="Top" Foreground="#FF30B900">
             <Label.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
