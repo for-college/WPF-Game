@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
-        Title="Считай или проиграешь" Height="210" Width="400">
+        Title="Считай или проиграешь" Height="210" Width="400"  ResizeMode="NoResize" Icon="/plus.png">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Loaded">
             <BeginStoryboard>
@@ -33,7 +33,7 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="80" />
         </Grid.RowDefinitions>
-        <TextBlock TextAlignment="Center"  Grid.ColumnSpan="6"  VerticalAlignment="Top" Text="Арифметика дело такое" Foreground="White" FontSize="24" Panel.ZIndex="2" Height="50" Grid.RowSpan="2"/>
+        <TextBlock TextAlignment="Center"  Grid.ColumnSpan="6"  VerticalAlignment="Top" Text="Считай или проиграешь" Foreground="White" FontSize="24" Panel.ZIndex="2" Height="50" Grid.RowSpan="2"/>
         <Border  Grid.ColumnSpan="6" Grid.RowSpan="5" Margin="0,0,0,10">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

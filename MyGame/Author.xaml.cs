@@ -20,10 +20,7 @@ namespace MyGame
     /// </summary>
     public partial class Author : Window
     {
-        public Author()
-        {
-            InitializeComponent();
-        }
+        public Author() => InitializeComponent();
         public void CloseWindow(object sender, RoutedEventArgs e) => Close();
 
         private void OpenGitHub(object sender, RoutedEventArgs e) => Process.Start("https://github.com/scffs");

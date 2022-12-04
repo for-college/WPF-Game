@@ -64,10 +64,10 @@ namespace MyGame
         private void Gaming(int a)
         {
             Storyboard storyboard = new Storyboard();
-            DoubleAnimation doubleAnimation= new DoubleAnimation();
+            DoubleAnimation doubleAnimation = new DoubleAnimation();
 
-            doubleAnimation.From= 0;
-            doubleAnimation.To= 1;
+            doubleAnimation.From = 0;
+            doubleAnimation.To = 1;
             doubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
             storyboard.Children.Add(doubleAnimation);
             Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath(OpacityProperty));
