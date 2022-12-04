@@ -45,7 +45,7 @@
         <TextBlock  x:Name="currentPlayer" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="Считает игрок"/>
         <!-- Кнопки -->
         <Border Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" Width="70" Height="50" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1" VerticalAlignment="Bottom">
-            <Button x:Name="buttonAnswer" Content="Ответить" Click="Answer" BorderThickness="0" Background="Transparent" />
+            <Button Style="{DynamicResource SimpleButton}" x:Name="buttonAnswer" Content="Ответить" Click="Answer" BorderThickness="0" Background="Transparent" />
         </Border>
     </Grid>
 </Window>

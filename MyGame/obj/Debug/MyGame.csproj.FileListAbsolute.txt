@@ -104,3 +104,7 @@ C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\GameRightOrNo.g.cs
 C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\GameRightOrNo.baml
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\GameRightOrNo.g.cs
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\GameRightOrNo.baml
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\ButtonTemplates.baml
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\App.baml
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\GameButton.baml
+C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\SimpleButton.baml

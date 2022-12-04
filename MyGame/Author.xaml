@@ -46,16 +46,16 @@
         </Border>
         <!-- GitHub -->
         <Image Grid.Column="2" Grid.Row="3" Source="/gh-light.png"></Image>
-        <Button Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="GitHub профиль" 
+        <Button Style="{DynamicResource GreenButton}" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="GitHub профиль" 
                 Click="OpenGitHub" Width="120"
                 BorderBrush="#FF30B900" Foreground="#FF30B900" Background="Transparent" />
         <!-- ВК -->
         <Image Grid.Column="1" Grid.Row="3" Source="VKW.png"></Image>
-        <Button Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Страница ВК" 
+        <Button Style="{DynamicResource GreenButton}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Страница ВК" 
                 Click="OpenVK" Width="120"
                 BorderBrush="#FF30B900" Foreground="#FF30B900" Background="Transparent" />
         <Image Grid.Column="3" Grid.Row="3" Source="/ava 1.png"></Image>
-        <Button Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Личный сайт" 
+        <Button Style="{DynamicResource GreenButton}" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Личный сайт" 
                 Click="OpenWeb" Width="120"
                 BorderBrush="#FF30B900" Foreground="#FF30B900" Background="Transparent" />
         <!-- Выход -->

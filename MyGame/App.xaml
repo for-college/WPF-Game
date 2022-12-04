@@ -4,7 +4,13 @@
              xmlns:local="clr-namespace:MyGame"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-       
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ButtonTemplates.xaml"/>
+                <ResourceDictionary Source="GameButton.xaml"/>
+                <ResourceDictionary Source="SimpleButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
     

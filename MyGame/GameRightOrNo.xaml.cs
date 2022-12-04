@@ -21,21 +21,21 @@ namespace MyGame
     /// </summary>
     public partial class GameRightOrNo : Window
     {
-        Random random = new Random(DateTime.Now.Millisecond);
+        //Random random = new Random(DateTime.Now.Millisecond);
 
-        List<string[,]> data = new List<string[,]>();
+        static List<string[,]> data = new List<string[,]>();
 
         int count;
         int[] answered = new int[9];
         int score;
-        // int[] count = new int[10];
+        static int rand = new Random().Next(0, data.Count);
+       
         int roundsAmount = Data.rounds;
         int currentRound = Data.currentRound;
         int temp;
         static int currentQuestion;
         string name1 = Data.playerOne;
         string name2 = Data.playerTwo;
-        // static int amountQuestions = questions.GetLength(0);
         string[,] questions = {  { "Каждый внешний угол из треугольника является столь же большим как два не примыкающим внутренним углом вместе", "1" },
                                      { "В прямоугольном треугольнике сумма квадратов длин катетов равна кубу длины гипотенузы.", "0" },
                                      { "Квадрат длины стороны треугольника равен сумме квадратов длин других сторон минус удвоенное произведение длин этих сторон на косинус угла между ними.", "1" },
@@ -48,7 +48,7 @@ namespace MyGame
         public GameRightOrNo()
         {
             InitializeComponent();
-            Random();
+          
             rounds.Text = "[1/" + Data.rounds + "]";
             currentPlayer.Text += $" {name1}!";
             questionScreen.Text = $"{questions[currentQuestion, 0]}";
@@ -74,25 +74,18 @@ namespace MyGame
             Storyboard.SetTargetName(doubleAnimation, questionScreen.Name);
             storyboard.Begin(this);
 
-            int Rand = new Random().Next(0, data.Count);
-
-            string text = data[Rand][0, 0];
-            bool status = data[Rand][0, 1] == "1" ? true : false;
             if (data.Count > 0)
             {
-                data.RemoveAt(Rand);
+                string text = data[rand][0, 0];
+                bool status = data[rand][0, 1] == "1" ? true : false;
+                data.RemoveAt(rand);
                 questionScreen.Text = text;
                 if (status) score++;
             }
-
-            
-            Random();
+                   
             Rounds();
         }
-        public void Random()
-        {
-           
-        }
+      
         public void Rounds()
         {
             currentRound++;
@@ -116,7 +109,7 @@ namespace MyGame
             score = 0;
 
             for (int i = 0; i < answered.Length; i++) answered[i] = 0;
-            Random();
+            
         }
     }
 }
