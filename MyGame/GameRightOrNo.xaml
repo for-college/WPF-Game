@@ -5,13 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
-        Title="GameRightOrNo" Height="450" Width="800">
+        Title="GameRightOrNo" Height="250" Width="720">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Loaded">
             <BeginStoryboard>
                 <Storyboard>
                     <DoubleAnimation From="0" To="1" Duration="0:0:1" Storyboard.TargetProperty="Opacity">
-                        
                     </DoubleAnimation>
                 </Storyboard>
             </BeginStoryboard>
@@ -19,30 +18,41 @@
     </Window.Triggers>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="40" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="40" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50px" />
+            <RowDefinition Height="70" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="50px" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock  x:Name="questionScreen" TextAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" Text=""/>
-        <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=""/>
-        <TextBlock  x:Name="currentPlayer" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="Ходит игрок" FontFamily="Microsoft PhagsPa"/>
+        <TextBlock  x:Name="questionScreen" TextAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Text="" Panel.ZIndex="2" Foreground="White"/>
+        <TextBlock  x:Name="rounds" TextAlignment="Center" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="" Panel.ZIndex="2" Foreground="White"/>
+        <TextBlock  x:Name="currentPlayer" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="Ходит игрок" FontFamily="Microsoft PhagsPa" Panel.ZIndex="2" Foreground="White"/>
         <!-- Кнопки -->
-        <Border Grid.Column="2"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
+        <Border Grid.Column="2"  Grid.Row="2" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1" Panel.ZIndex="2">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFFF4940" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
             <Button Style="{DynamicResource SimpleButton}" x:Name="buttonFalse" Content="Неверно" Click="ButtonFalse" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
         </Border>
-        <Border Grid.Column="3"  Grid.Row="4" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1">
+        <Border Grid.Column="3"  Grid.Row="2" Width="70" CornerRadius="10" BorderBrush="#FFABADB3" BorderThickness="1" Panel.ZIndex="3">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF72FF40" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
             <Button Style="{DynamicResource SimpleButton}" x:Name="buttonTrue" Content="Верно" Click="ButtonTrue" BorderThickness="0" Background="Transparent" FontFamily="Bookman Old Style"/>
         </Border>
+        <Border CornerRadius="5" VerticalAlignment="Top" Background="#CC000000" Grid.ColumnSpan="6" Grid.Row="0" Grid.RowSpan="4" Height="242" HorizontalAlignment="Right" Margin="0,-8,0,0" Width="720"/>
     </Grid>
 </Window>

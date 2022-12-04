@@ -37,7 +37,13 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Column="2" CornerRadius="5" Height="40" VerticalAlignment="Center" Width="400" Background="#FF30B900" Grid.ColumnSpan="3">
+        <Border Grid.Column="2" CornerRadius="5" Height="40" VerticalAlignment="Center" Width="400" Grid.ColumnSpan="3">
+            <Border.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF57D27B" Offset="1"/>
+                    <GradientStop Color="#FF00FF4A" Offset="0"/>
+                </RadialGradientBrush>
+            </Border.Background>
             <TextBlock TextAlignment="Center"
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Center" 
