@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
-        Title="Правила игры" Height="450" Width="800" Icon="/rules.png" ResizeMode="NoResize">
+        Title="Правила игры" Height="450" Width="800" Icon="/rules.png" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Loaded">
             <BeginStoryboard>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
-        Title="Где больше" Height="450" Width="800" Icon="/more.jpg" ResizeMode="NoResize">
+        Title="Где больше" Height="450" Width="800" Icon="/more.jpg" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Loaded">
             <BeginStoryboard>

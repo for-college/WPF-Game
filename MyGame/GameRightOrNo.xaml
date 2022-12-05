@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGame"
         mc:Ignorable="d"
-        Title="Верно или нет?" Height="250" Width="720" Icon="/question.jpg">
+        Title="Верно или нет?" Height="250" Width="720" Icon="/question.jpg" WindowStartupLocation="CenterScreen">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Loaded">
             <BeginStoryboard>
