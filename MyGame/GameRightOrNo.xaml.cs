@@ -21,30 +21,30 @@ namespace MyGame
     /// </summary>
     public partial class GameRightOrNo : Window
     {
-        //Random random = new Random(DateTime.Now.Millisecond);
-
         static List<string[,]> data = new List<string[,]>();
 
-        int count;
         int[] answered = new int[9];
         int score;
-        static int rand = new Random().Next(0, data.Count);
-       
+        static int rand = new Random().Next(0, data.Count);       
         int roundsAmount = Data.rounds;
         int currentRound = Data.currentRound;
         int temp;
         static int currentQuestion;
         string name1 = Data.playerOne;
         string name2 = Data.playerTwo;
-        string[,] questions = {  { "Каждый внешний угол из треугольника является столь же большим как два не примыкающим внутренним углом вместе", "1" },
+        string[,] questions = {  { "Каждый внешний угол из треугольника является столь же большим как два не примыкающим внутренним углом вместе.", "1" },
                                      { "В прямоугольном треугольнике сумма квадратов длин катетов равна кубу длины гипотенузы.", "0" },
                                      { "Квадрат длины стороны треугольника равен сумме квадратов длин других сторон минус удвоенное произведение длин этих сторон на косинус угла между ними.", "1" },
-                                     { "Сумма углов только равнобедренного треугольника равна 180", "0" },
+                                     { "Сумма углов только равнобедренного треугольника равна 180.", "0" },
                                      { "Теорема Виета работает не только для приведенного квадратного уравнения.", "1" },
                                      { "Квадратный корень из 2 больше двух.", "0" },
-                                     { "Корень 7-ой степени из -2187 меньше нуля", "0" },
-                                     { "2 в 5 степени - 32", "1" },
-                                     { "В прямоугольном треугольнике сумма квадратов длин катетов равна квадрату длины гипотенузы.", "1" }};
+                                     { "Корень 7-ой степени из -2187 меньше нуля.", "0" },
+                                     { "2 в 5 степени - 32.", "1" },
+                                     { "В прямоугольном треугольнике сумма квадратов длин катетов равна квадрату длины гипотенузы.", "1" },
+                                     { "Великую Теорему Фирма доказал Лобачевский.", "0" },
+                                     { "Великую Теорему Ферма доказал Эндрю Уайлс.", "1" },
+                                     { "Квадратное уравнение может иметь 3 корня.", "0" },
+                                     { "Квадратное уравнение всегда имеет 2 корня.", "0" }};
         public GameRightOrNo()
         {
             InitializeComponent();
@@ -53,10 +53,7 @@ namespace MyGame
             currentPlayer.Text += $" {name1}!";
             questionScreen.Text = $"{questions[currentQuestion, 0]}";
 
-            for (int i = 0; i < questions.GetLength(0); i++)
-            {
-                data.Add(new string[,] { { questions[i, 0], questions[i, 1] } });
-            }
+            for (int i = 0; i < questions.GetLength(0); i++) data.Add(new string[,] { { questions[i, 0], questions[i, 1] } });
         }
         private void ButtonFalse(object sender, RoutedEventArgs e) => Gaming(0);
 
@@ -81,8 +78,7 @@ namespace MyGame
                 data.RemoveAt(rand);
                 questionScreen.Text = text;
                 if (status) score++;
-            }
-                   
+            }   
             Rounds();
         }
       
@@ -109,7 +105,6 @@ namespace MyGame
             score = 0;
 
             for (int i = 0; i < answered.Length; i++) answered[i] = 0;
-            
         }
     }
 }

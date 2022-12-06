@@ -108,3 +108,7 @@ C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\ButtonTemplates.baml
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\App.baml
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\GameButton.baml
 C:\Users\haks\Documents\GitHub\WPF-Game\MyGame\obj\Debug\SimpleButton.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\ButtonTemplates.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\GameButton.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\SimpleButton.baml
+C:\Users\okulov-sm\Desktop\git\WPF-Game\MyGame\obj\Debug\App.baml

@@ -61,6 +61,6 @@
         <!-- Выход -->
         <Button VerticalAlignment="Top"
                 Width="70" Height="20" Content="Закрыть" Background="White" BorderBrush="Red" Foreground="Red" Click="CloseWindow" 
-                HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Column="4"/>
+                HorizontalAlignment="Right" Grid.Column="4"/>
     </Grid>
 </Window>

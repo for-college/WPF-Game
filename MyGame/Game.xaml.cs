@@ -82,6 +82,5 @@ namespace MyGame
             score = 0;
             Random();
         }
-       
     }
 }

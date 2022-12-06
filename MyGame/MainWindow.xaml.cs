@@ -23,24 +23,18 @@ namespace MyGame
     public partial class MainWindow : Window
     {
         int roundsInt = Data.rounds;
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        public MainWindow() => InitializeComponent();
         private void ShowRules(object sender, RoutedEventArgs e)
         {
             Rules rules = new Rules();
             rules.ShowDialog();
         }
-
         private void CloseWindow(object sender, RoutedEventArgs e) => Close();
-
         private void OpenAuthorWindow(object sender, RoutedEventArgs e)
         {
             Author author = new Author();
             author.ShowDialog();
         }
-
         private void OpenGameList(object sender, RoutedEventArgs e)
         {
             if (rounds.Text == "") roundsInt = 5;
@@ -51,10 +45,7 @@ namespace MyGame
                 if(roundsInt <= 0) throw new Exception("Количество раундов < 0");
                 else GameList();
             }
-            catch(Exception ex)
-            { 
-                MessageBox.Show(ex.Message, "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+            catch(Exception ex) { MessageBox.Show(ex.Message, "Ошибочка", MessageBoxButton.OK, MessageBoxImage.Warning); }
         }
         private void GameList()
         {
